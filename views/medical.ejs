@@ -6,17 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical Reports</title>
 </head>
-<body style="text-align: center">
+<body>
     <h1>Medical Reports</h1>
-    <table border="3" style="align-content: center;">
-        <thead>
+    <table border="3" style="border-right: 20;">
+        <thead style="text-align: center;">
             <tr>
                 <td>ID</td>
                 <td>Name Diagnosic</td>
                 <td>Treatment</td>
                 <td>Cost</td>
-                <td>ID Patient</td>
-                <td>ID Doctor</td>
                 <td>Action</td>
             </tr>
         </thead>
@@ -27,11 +25,10 @@
                 <td><%= x.diagnosis %></td>
                 <td><%= x.treatment %></td>
                 <td><%= x.cost %></td>
-                <td><%= x.PatientId %></td>
-                <td><%= x.DoctorId %></td>
                 <td>
-                    <a href="/edit"></a><button>edit</button>
-                    <button>delete</button>
+                    <a href="/medicalReports/add/medical"><button>Add</button></a>
+                    <a href="/edit"><button>Update</button></a>
+                    <button>Delete</button>
                 </td>
             </tr>
             <% }) %>
