@@ -15,11 +15,55 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   UserDetail.init({
-    fullname: DataTypes.STRING,
+    fullname: {
+      type:DataTypes.STRING,
+      allowNull : false,
+      validate: {
+        notNull : {
+          msg:"Name is required"
+        },
+        notEmpty: {
+          msg: "Name is required"
+        }
+      }
+      },
     address: DataTypes.STRING,
-    dateOfBirth: DataTypes.DATE,
-    phone: DataTypes.STRING,
-    gender: DataTypes.STRING,
+    dateOfBirth: {
+     type: DataTypes.DATE,
+     allowNull : false,
+     validate: {
+      notNull : {
+        msg:"Birth is required"
+      },
+      notEmpty: {
+        msg: "Birth is required"
+      }
+    }
+    },
+    phone: {
+     type: DataTypes.STRING,
+     allowNull : false,
+     validate: {
+      notNull : {
+        msg:"Phone is required"
+      },
+      notEmpty: {
+        msg: "Phone is required"
+      }
+    }
+    },
+    gender: {
+      type: DataTypes.STRING,
+      allowNull : false,
+      validate: {
+       notNull : {
+         msg:"Gender is required"
+       },
+       notEmpty: {
+         msg: "Gender is required"
+       }
+     }
+     },
     UserId: {
       type : DataTypes.INTEGER,
       references: {

@@ -17,11 +17,55 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   MedicalRecord.init({
-    diagnosis: DataTypes.STRING,
+    diagnosis: {
+      type: DataTypes.STRING,
+      allowNull : false,
+      validate: {
+       notNull : {
+         msg:"Diagnosis is required"
+       },
+       notEmpty: {
+         msg: "Diagnosis is required"
+       }
+     }
+     },
     treatment: DataTypes.TEXT,
-    cost: DataTypes.INTEGER,
-    PatientId: DataTypes.INTEGER,
-    DoctorId: DataTypes.INTEGER
+    cost: {
+      type:DataTypes.INTEGER,
+      allowNull : false,
+      validate: {
+        notNull : {
+          msg:"Cost is required"
+        },
+        notEmpty: {
+          msg: "Cost is required"
+        }
+      }
+    },
+    PatientId: { 
+      type: DataTypes.INTEGER,
+      allowNull : false,
+      validate: {
+        notNull : {
+          msg:"PatientId is required"
+        },
+        notEmpty: {
+          msg: "PatientId is required"
+        }
+      }
+      },
+    DoctorId: { 
+      type: DataTypes.INTEGER,
+      allowNull : false,
+      validate: {
+        notNull : {
+          msg:"DoctorId is required"
+        },
+        notEmpty: {
+          msg: "DoctorId is required"
+        }
+      }
+      },
   }, {
     sequelize,
     modelName: 'MedicalRecord',
