@@ -1,0 +1,36 @@
+[{
+    "fullname": "Lorettalorna Georgius",
+    "address": "85 Comanche Center",
+    "dateOfBirth": "2/17/1999",
+    "phone": "412 445 0819",
+    "gender": "Female",
+    "UserId": 1
+  }, {
+    "fullname": "Rosemonde Portal",
+    "address": "9 Pine View Parkway",
+    "dateOfBirth": "7/21/1985",
+    "phone": "899 957 6778",
+    "gender": "Female",
+    "UserId": 2
+  }, {
+    "fullname": "Thomasa Prantl",
+    "address": "41382 Milwaukee Crossing",
+    "dateOfBirth": "3/14/2000",
+    "phone": "770 491 0901",
+    "gender": "Female",
+    "UserId": 3
+  }, {
+    "fullname": "Randie Lynn",
+    "address": "75209 Fallview Way",
+    "dateOfBirth": "8/14/2010",
+    "phone": "228 378 5588",
+    "gender": "Male",
+    "UserId": 4
+  }, {
+    "fullname": "Ailis Hulburd",
+    "address": "1 Blaine Court",
+    "dateOfBirth": "10/16/1992",
+    "phone": "411 769 8916",
+    "gender": "Female",
+    "UserId": 5
+  }]

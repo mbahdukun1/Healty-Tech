@@ -1,0 +1,32 @@
+[ 
+    {
+        "email" : "dicky@gmail.com",
+        "password" : "12345",
+        "role" : "doctor"
+    },
+    {
+        "email" : "asbon@gmail.com",
+        "password" : "12345",
+        "role": "patient"
+    },
+    {
+        "email" : "user3@gmail.com",
+        "password" : "12345",
+        "role" : "doctor"
+    },
+    {
+        "email" : "user4@gmail.com",
+        "password" : "12345",
+        "role": "patient"
+    },
+    {
+        "email" : "user5@gmail.com",
+        "password" : "12345",
+        "role" : "patient"
+    },
+    {
+        "email" : "asbon@gmail.com",
+        "password" : "12345",
+        "role": "patient"
+    }
+]
