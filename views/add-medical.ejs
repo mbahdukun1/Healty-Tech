@@ -11,16 +11,16 @@
     <h1>Form Add Job</h1>
     <form action="/medicalReports/add/medical" method="post">
         <p>
-            Medical Reports : <br>
-            <input type="text" name="title">
+            Diagnosic : <br>
+            <input type="text" name="diagnosis">
         </p>
         <p>
             Treatments : <br>
-            <input type="text" name="title"> 
+            <textarea name="treatment" cols="30" rows="10"></textarea>
         </p>
         <p>
             Cost : <br>
-            <input type="number" name="title"> 
+            <input type="number" name="cost"> 
         </p>
         <input type="submit" value="Save">
         <a href="/medicalReports/showMedicalRecords">
