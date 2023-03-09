@@ -42,30 +42,8 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    PatientId: { 
-      type: DataTypes.INTEGER,
-      allowNull : false,
-      validate: {
-        notNull : {
-          msg:"PatientId is required"
-        },
-        notEmpty: {
-          msg: "PatientId is required"
-        }
-      }
-      },
-    DoctorId: { 
-      type: DataTypes.INTEGER,
-      allowNull : false,
-      validate: {
-        notNull : {
-          msg:"DoctorId is required"
-        },
-        notEmpty: {
-          msg: "Master is required"
-        }
-      }
-      },
+    PatientId: DataTypes.INTEGER,
+    DoctorId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'MedicalRecord',
