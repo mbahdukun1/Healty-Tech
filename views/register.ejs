@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <% if(errMsg){ %>
+        <p style="color: red;"> <%= errMsg.replaceAll(',',' | ') %></p>
+    <% } %>
+    <form action="/register" method="post">
+        <label for="email">Email</label> <br>
+        <input type="text" name="email"> <br>
+        
+        <label for="password">Password</label> <br>
+        <input type="password" name="password"> <br>
+
+        <label for="role">Mendaftar sebagai: </label> <br>
+        <input type="radio" name="role" value="doctor"> Dokter <br>
+        <input type="radio" name="role" value="patient"> Pasien <br> <br>
+
+        <input type="submit" value="Register">
+        <a href="/"><button type="button">Cancel</button></a>
+
+    </form>
+</body>
+</html>
+</body>
+</html>

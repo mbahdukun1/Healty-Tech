@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <% if(errMsg){ %>
+        <p style="color: red;"> <%= errMsg.replaceAll(',',' | ') %></p>
+    <% } %>
+    <p>Lengkapi data-data berikut</p>
+    <form action="/register/details?UserId=<%= UserId %>" method="post">
+        <label for="fullname">Nama Lengkap:</label> <br>
+        <input type="text" name="fullname"> <br>
+        
+        <label for="address">Alamat:</label> <br>
+        <input type="text" name="address"> <br>
+
+        <label for="dateOfBirth">Tanggal Lahir</label> <br>
+        <input type="Date" name="dateOfBirth"> <br>
+
+        <label for="phone">No. Handphone</label> <br>
+        <input type="text" name="phone"> <br>
+
+        <label for="gender">Gender</label> <br>
+        <input type="radio" name="gender" value="Male"> Laki-laki <br>
+        <input type="radio" name="gender" value="Female"> Perempuan<br> <br>
+
+        <input type="submit" value="Register">
+        <a href="/"><button type="button">Cancel</button></a>
+
+    </form>
+</body>
+</html>
+</body>
+</html>
