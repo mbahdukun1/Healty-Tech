@@ -32,7 +32,7 @@ class Controller {
         const {id} = req.params
         const {diagnosis,treatment,cost} = req.body
         MedicalRecord.update({diagnosis,treatment,cost}, {where: {id: id}})
-            .then(_ => res.redirect('medicalReports/showMedicalRecords'))
+            .then(_ => res.redirect('/medicalReports/showMedicalRecords'))
             .catch(err => res.send(err))
     }
 
