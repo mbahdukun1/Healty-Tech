@@ -19,7 +19,7 @@ router.use((req, res, next)=>{
     }
 })
 
-router.use('/users', require('./userDetail'))
+router.use('/userDetail', require('./userDetail'))
 router.use('/medicalReports', require('./medicalReports'))
 router.get('/logout', Controller.logOut)
 
