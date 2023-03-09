@@ -1,13 +1,12 @@
 const express = require('express')
-const Controller = require('../controller/index')
+const UserController = require('../controller/userRole')
 const router = express.Router()
 
-router.get('/showMedicalRecords', Controller.medicalRecord)
-router.get('/add/medical', Controller.addMedical)
-router.post('/add/medical', Controller.addMedicalPost)
-router.get('/:id', Controller.readMedical)
-router.post('/:id/edit', Controller.editMedical)
-router.get('/deleteMedical/:id', Controller.deleteMedical)
-
+router.get('/showMedicalRecords', UserController.medicalRecord)
+router.get('/add/medical', UserController.addMedical)
+router.post('/add/medical', UserController.addMedicalPost)
+router.get('/:id', UserController.readMedical)
+router.post('/:id/edit', UserController.editMedical)
+router.get('/deleteMedical/:id', UserController.deleteMedical)
 
 module.exports = router

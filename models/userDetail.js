@@ -33,10 +33,10 @@ module.exports = (sequelize, DataTypes) => {
      allowNull : false,
      validate: {
       notNull : {
-        msg:"Birth is required"
+        msg:"Birth date is required"
       },
       notEmpty: {
-        msg: "Birth is required"
+        msg: "Birth date is required"
       }
     }
     },
@@ -45,10 +45,10 @@ module.exports = (sequelize, DataTypes) => {
      allowNull : false,
      validate: {
       notNull : {
-        msg:"Phone is required"
+        msg:"Phone number is required"
       },
       notEmpty: {
-        msg: "Phone is required"
+        msg: "Phone number is required"
       }
     }
     },

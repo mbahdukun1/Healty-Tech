@@ -1,25 +1,37 @@
-[{
+[
+  {
     "diagnosis": "Cynictis penicillata",
     "treatment": "AMERGE",
     "cost": 31565,
     "PatientId": 1,
     "DoctorId": 3
-  }, {
+  },
+  {
     "diagnosis": "Macropus fuliginosus",
     "treatment": "Nitrofurantion Macrocrystals",
     "cost": 87602,
     "PatientId": 2,
     "DoctorId": 1
-  }, {
+  },
+  {
+    "diagnosis": "Sakit Perut",
+    "treatment": "Nitrofurantion Macrocrystals",
+    "cost": 20000,
+    "PatientId": 3,
+    "DoctorId": 1
+  },
+  {
     "diagnosis": "Notechis semmiannulatus",
     "treatment": "Dolce and Gabbana The Lift Foundation Caramel 110",
     "cost": 96345,
     "PatientId": 4,
     "DoctorId": 3
-  }, {
+  },
+  {
     "diagnosis": "Leptoptilus dubius",
     "treatment": "Rejuvaderm Medispa sunscreen",
     "cost": 57984,
     "PatientId": 5,
     "DoctorId": 1
-  }]
+  }
+]
