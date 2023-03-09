@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
           msg:"DoctorId is required"
         },
         notEmpty: {
-          msg: "DoctorId is required"
+          msg: "Master is required"
         }
       }
       },
