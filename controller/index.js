@@ -21,7 +21,7 @@ class Controller {
         res.redirect(`/register/details?UserId=${data.id}`)
       })
       .catch(err => {
-        if (err.name === 'SequelizeValidationError' || err.name==="SequelizeUniqueConstraintError") {
+        if (err.name === 'SequelizeValidationError' || err.name === "SequelizeUniqueConstraintError") {
           const errMsg = err.errors.map(el => el.message)
           res.redirect(`/register?errMsg=${errMsg}`)
         } else {
@@ -31,7 +31,6 @@ class Controller {
   }
 
   static registerDetailForm(req, res) {
-    // console.log('ini dari form detail')
     const { errMsg, UserId } = req.query
     res.render('register-detail', { errMsg, UserId })
   }
@@ -47,7 +46,7 @@ class Controller {
       .catch(err => {
         if (err.name === 'SequelizeValidationError') {
           const errMsg = err.errors.map(el => el.message)
-          res.redirect(`/register/details?errMsg=${errMsg}`)
+          res.redirect(`/register/details?UserId=${id}&errMsg=${errMsg}`)
         } else {
           res.send(err)
         }
@@ -62,15 +61,16 @@ class Controller {
   static loginPost(req, res) {
     const { email, password } = req.body
     User.findOne({ where: { email: email } })
-      .then(Userdata => {
-        if (Userdata) {
-          if (bcryptjs.compareSync(password, Userdata.password)) {
-            req.session.email = Userdata.email
-            // // req.session.password = Userdata.password
-            req.session.role = Userdata.role
-            const { role } = Userdata
-            // res.send(Userdata)
-            return res.redirect(`/${role}/${Userdata.id}`)
+      .then(userData => {
+        if (userData) {
+          if (bcryptjs.compareSync(password, userData.password)) {
+            req.session.email = userData.email;
+            req.session.role = userData.role;
+            if(req.session.role === 'doctor'){
+              return res.redirect(`/doctors/${userData.id}`)
+            } else {
+              return res.redirect(`/patients/${userData.id}`)
+            }
           } else {
             const errMsg = 'password is invalid!'
             return res.redirect(`/login?errMsg=${errMsg}`)

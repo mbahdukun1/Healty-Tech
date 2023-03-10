@@ -8,26 +8,26 @@
     <title>Edit Medical</title>
 </head>
 <body style="text-align: center;">
-    <% medical.forEach(x => { %>
-        <h1>Medical Reports Detail #<%= x.id%></h1> 
-        <form action="/medicalReports/<%= x.id%>/edit" method="post">
+  
+        <h1>Medical Reports Detail #<%= medical.id%></h1> 
+        <form action="/doctors/<%= id %>/edit/" method="post">
             <p>
                 Diagnosic : <br>
-                <input type="text" name="diagnosis" value="<%= x.diagnosis %>">
+                <input type="text" name="diagnosis" value="<%= medical.diagnosis %>">
             </p>
             <p>
                 Treatments : <br>
-                <input type ="text" name="treatment" value="<%= x.treatment %>"></input>
+                <input type ="text" name="treatment" value="<%= medical.treatment %>"></input>
             </p>
             <p>
                 Cost : <br>
-                <input type="number" name="cost" value="<%= x.cost %>"> 
+                <input type="number" name="cost" value="<%= formatter(medical.cost) %>"> 
             </p>
         <input type="submit" value="SAVE">
         <a href="/medicalReports/showMedicalRecords">
             <input type="button" value="CANCEL">
         </a>
         </form>
-    <% }) %>
+
 </body>
 </html>

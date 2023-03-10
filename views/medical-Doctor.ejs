@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Medical Record <%= nameTmp %></h1> 
+    <a href="/logout"><button type="button">logout</button></a> ||
+    <a href="/doctors/<%= id %>/add" ><button >Add</button></a>
+
+    <% const {email, role, MedicalRecordPatient}=record %>
+        <table border="1">
+            
+            <th >Diagnosis</th>
+            <th>Treatment</th>
+            <th>Biaya</th>
+            <th>Option</th>
+            <% MedicalRecordPatient.forEach(el=>{ %>
+                <tr>
+
+                    <td><%= el.diagnosis %></td>
+                    <td><%= el.treatment %></td>
+                    <td><%= formatter(el.cost) %></td>
+                    <td>
+                        <a href="/doctors/<%= id %>/edit/<%= el.id %>"><button type="button"> Edit </button></a>
+                        <a href="/doctors/<%= id %>/delete/<%= el.id %>"><button type="button"> Delete </button></a>
+                    </td>
+                </tr>
+                <% }) %>
+
+        </table>
+        
+</body>
+
+</html>

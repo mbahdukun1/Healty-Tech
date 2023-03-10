@@ -19,8 +19,8 @@ router.use((req, res, next)=>{
     }
 })
 
-router.use('/userDetail', require('./userDetail'))
-router.use('/medicalReports', require('./medicalReports'))
+router.use('/patients', require('./patient'))
+router.use('/doctors', require('./doctor'))
 router.get('/logout', Controller.logOut)
 
 module.exports = router

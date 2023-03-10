@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome <%= userDetail.UserDetail.fullname %></title>
+</head>
+
+<body>
+    <% const {UserDetail}=userDetail %>
+        <% const {fullname, address, dateOfBirth, phone, gender}= UserDetail %>
+            <h1>Profile <%= fullname %></h1> 
+            <a href="/logout"><button type="button">logout</button></a>
+
+            <p>Alamat : <%= address %>
+            </p>
+            <p>Tanggal Lahir : <%= dateOfBirth %>
+            </p>
+            <p>Nomor Hp : <%= phone %>
+            </p>
+            <p>Gender : <%= gender %>
+            </p>
+        <a href="/<%= userDetail.role %>s/<%= userDetail.id %>/medicalRecords"><button type="button">Medical Records</button></a>
+        
+</body>
+
+</html>
